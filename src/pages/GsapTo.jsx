@@ -1,5 +1,14 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 const GsapTo = () => {
   // TODO: Implement the gsap.to() method
+
+  useGSAP(() => {
+    gsap.to("#blue-box", {
+      x: 250,
+    });
+  }, []);
 
   return (
     <main>
@@ -22,8 +31,7 @@ const GsapTo = () => {
         <a
           href="https://greensock.com/docs/v3/GSAP/gsap.to()"
           target="_blank"
-          rel="noreferrer noopener nofollow"
-        >
+          rel="noreferrer noopener nofollow">
           gsap.to()
         </a>{" "}
         method.
